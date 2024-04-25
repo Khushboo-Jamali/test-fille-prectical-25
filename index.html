@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f3d7a8;
+    }
+    .container {
+      /* align-items: center; */
+      background-image: url(./images/bg.jpg);
+      background-size: 100% 100%;
+      width: 100%;
+      height: 90vh;
+
+      color: white;
+    }
+    .box-nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    .container .box-nav .logo {
+      margin-left: 40px;
+      font-size: 3em;
+    }
+    .box-nav nav {
+      text-align: center;
+    }
+    nav ul li {
+      margin-right: 2em;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    nav ul .btn1 {
+      padding: 10px 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      background-color: #c23616;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+    .text {
+      text-align: center;
+      margin-top: 25vh;
+    }
+    .text h1 {
+      font-size: 3.2rem;
+      padding-bottom: 10px;
+    }
+    .text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .text .btn2 {
+      background-color: #c23616;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+    .box-line {
+      justify-content: center;
+      display: flex;
+      /* background-color: aqua; */
+      width: 100%;
+      height: 10vh;
+      margin-top: 40px;
+    }
+    .box-line .line {
+      justify-content: space-between;
+      border-radius: 10px;
+      background-color: #c23616;
+      height: 10px;
+      width: 40%;
+    }
+    /* .box-line .line2 {
+      background-color: #c23616;
+      height: 20px;
+      width: 46%;
+    } */
+
+    .box-line p {
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: -3px;
+      font-size: 1.2rem;
+      color: #c23616;
+    }
+    .cards-box {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      display: flex;
+      width: 100%;
+      /* background-color: blue; */
+      height: 200%;
+    }
+    .cards-box .card1 {
+      margin-top: 30px;
+      box-shadow: 0 8px 16px 0 rgba(3, 3, 3, 1.2);
+      transition: 1s;
+      border-radius: 20px;
+      text-align: center;
+      padding: 15px 15px;
+      background-color: #af5d4a;
+      height: 200%;
+      width: 280px;
+    }
+    .cards-box .card1 img {
+      height: 240px;
+      border-radius: 20px;
+      width: 240px;
+    }
+    .card1 .title {
+      color: #fab1a0;
+      text-align: left;
+    }
+    .card1 .title h1 {
+      padding-top: 5px;
+      color: white;
+      margin-left: 8px;
+    }
+    .card1 .title p {
+      padding-top: 8px;
+      margin-left: 8px;
+    }
+    .card1 .price {
+      width: 250px;
+      height: 50px;
+      margin-left: 10px;
+      margin-top: 25px;
+      align-items: center;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+    .card1 .price .btn3 {
+      background-color: #c23616;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 20px;
+      font-size: 1.1rem;
+    }
+    .cards-box .card1:hover {
+      box-shadow: 0 8px 16px 0 rgba(3, 3, 3, 1.2);
+    }
+
+    .box-line2 {
+      justify-content: center;
+      display: flex;
+      /* background-color: aqua; */
+      width: 100%;
+      height: 10vh;
+      margin-top: 100px;
+    }
+    .box-line2 .line2 {
+      justify-content: space-between;
+      border-radius: 10px;
+      background-color: #c23616;
+      height: 10px;
+      width: 40%;
+    }
+
+    .box-line2 p {
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: -3px;
+      font-size: 1.2rem;
+      color: #c23616;
+    }
+    .logo-image {
+      justify-content: space-evenly;
+      height: 400px;
+      width: 100%;
+      background-color: #f3d7a8;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .logo-image img {
+      width: 250px;
+      height: 240px;
+    }
+    .logo-image .img1 {
+      border-radius: 50%;
+    }
+
+    .box-line3 {
+      justify-content: center;
+      display: flex;
+      /* background-color: aqua; */
+      width: 100%;
+      height: 10vh;
+    }
+    .box-line3 .line3 {
+      justify-content: space-between;
+      border-radius: 10px;
+      background-color: #f3d7a8;
+      height: 8px;
+      width: 40%;
+    }
+
+    .box-line3 p {
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: -3px;
+      font-size: 1.2rem;
+      color: #f3d7a8;
+    }
+    .footer {
+      align-items: center;
+      background-color: #af5d4a;
+      height: 400px;
+      width: 100%;
+      padding: 30px 20px;
+    }
+    .footer-home {
+      font-size: 1.2rem;
+      color: #f3d7a8;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+    }
+    .footer-home h3 {
+      color: white;
+      padding-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .footer-home ul .box-icon {
+      justify-content: space-between;
+      display: flex;
+    }
+    .box-icon {
+      align-items: center;
+      /* background-color: #fab1a0; */
+      height: 10vh;
+      width: 15vw;
+    }
+    .footer-home ul .box-icon li i {
+      background-color: white;
+      padding: 10px 10px;
+      border-radius: 30px;
+    }
+    .footer .footer-text {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-top: 20px;
+      height: 10vh;
+      margin-top: 78px;
+      /* background-color: aqua; */
+      border-top: 3px solid #f3d7a8;
+      color: white;
+      margin-bottom: 0;
+    }
+    .footer .footer-text button {
+      text-align: center;
+      background-color: white;
+      color: #af5d4a;
+      /* padding-bottom: 10px; */
+      border: none;
+      width: 30px;
+      font-size: 25px;
+      height: 30px;
+      border-radius: 70px;
+      margin-right: 10px;
+    }
+    @media (max-width: 1163) {
+      .box-nav {
+        flex-direction: row;
+      }
+    }
+  </style>
+  <body>
+    <!-- ............START CONTAINER BOX............ -->
+
+    <div class="container">
+      <div class="box-nav">
+        <h1 class="logo">Filtro</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Explore Us</li>
+            <li>Brands</li>
+            <li>Contact Us</li>
+            <button class="btn1">Sign up/Login</button>
+            <button class="btn1"><i class="fa fa-apple"></i>Get the app</button>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ............START TEXT BOX............ -->
+
+      <div class="text">
+        <h1>Power up with coffee</h1>
+        <p>Start your exciting day with a cup of Brew coffee</p>
+        <button class="btn2">Explore Us</button>
+      </div>
+      <!-- ............TEXT BOX END............ -->
+    </div>
+    <!-- ............END CONTAINER BOX............ -->
+
+    <!-- ............START LINE BOX............ -->
+    <div class="box-line">
+      <div class="line"></div>
+      <p>Explore the Coffee World</p>
+      <div class="line"></div>
+    </div>
+    <!-- ............END LINE BOX............ -->
+
+    <!-- ............START CARDS BOX............ -->
+    <div class="cards-box">
+      <div class="card1">
+        <img src="./images/Coffee.png" alt="" />
+        <div class="title">
+          <h1>Cappacino</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dignissimos incidunt explicabo voluptatibus ab ad repellendus totam
+            repellat quod vitae.
+          </p>
+        </div>
+        <div class="price">
+          <h2>$8.60</h2>
+          <button class="btn3">Order now</button>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="./images/cup.png" alt="" />
+        <div class="title">
+          <h1>Mocha</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dignissimos incidunt explicabo voluptatibus ab ad repellendus totam
+            repellat quod vitae.
+          </p>
+        </div>
+        <div class="price">
+          <h2>$9.20</h2>
+          <button class="btn3">Order now</button>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="./images/unsplash_TvXpVcgi9nw.png" alt="" />
+        <div class="title">
+          <h1>Latte</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dignissimos incidunt explicabo voluptatibus ab ad repellendus totam
+            repellat quod vitae.
+          </p>
+        </div>
+        <div class="price">
+          <h2>$11.40</h2>
+          <button class="btn3">Order now</button>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="./images/unsplash_L-sm1B4L1Ns.png" alt="" />
+        <div class="title">
+          <h1>Cold Java</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            dignissimos incidunt explicabo voluptatibus ab ad repellendus totam
+            repellat quod vitae.
+          </p>
+        </div>
+        <div class="price">
+          <h2>$6.40</h2>
+          <button class="btn3">Order now</button>
+        </div>
+      </div>
+    </div>
+    <!-- ............END CARDS BOX............ -->
+
+    <!-- ............START LINE BOX............ -->
+    <div class="box-line2">
+      <div class="line2"></div>
+      <p>Brands We Work With</p>
+      <div class="line2"></div>
+    </div>
+    <!-- ............END LINE BOX............ -->
+    <!-- ............START LOGO IMAGES BOX............ -->
+    <div class="logo-image">
+      <img src="./images/logo.jpg" class="img1" />
+      <img src="./images/Nescafe-Logo.png" alt="" />
+      <img src="./images/Tim hortins.png" alt="" />
+      <img src="./images/Dunkin Donuts.png" alt="" />
+    </div>
+    <!-- ............END LOGO IMAGES BOX............ -->
+    <!-- ............START FOOTER BOX............ -->
+    <div class="footer">
+      <div class="box-line3">
+        <div class="line3"></div>
+        <p>Get in Touch with Us</p>
+        <div class="line3"></div>
+      </div>
+
+      <div class="footer-home">
+        <ul>
+          <h3>Marchandise</h3>
+          <li>T-shirts</li>
+          <li>Caps</li>
+          <li>Masks</li>
+        </ul>
+        <ul>
+          <h3>Franchise</h3>
+          <li>Coffee Outlet</li>
+          <li>Coffee Vending Machine</li>
+          <li>Contact Us</li>
+        </ul>
+        <ul>
+          <h3>About Us</h3>
+          <li>Promotions</li>
+          <li>Customer Care</li>
+          <li>Legal Infrmation</li>
+          <li>Achievements</li>
+          <li>Careers</li>
+        </ul>
+
+        <ul>
+          <h3>Follow Us</h3>
+          <div class="box-icon">
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-facebook"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-pinterest-p"></i></li>
+          </div>
+        </ul>
+      </div>
+      <div class="footer-text">
+        <button>C</button>
+
+        <h3>Filtro All Rights Reseved</h3>
+      </div>
+    </div>
+    <!-- ............END LOGO IMAGES BOX............ -->
+  </body>
+</html>
